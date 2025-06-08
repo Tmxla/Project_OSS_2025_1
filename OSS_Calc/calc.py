@@ -40,6 +40,18 @@ class Calculator:
         elif char == '=':
             try:
                 self.expression = str(eval(self.expression))
+                if self.expression == "8282":
+                    self.expression = "지금 당장 전화해~ (다비치)"
+                elif self.expression == "404":
+                    self.expression = "Not Found 😅"
+                elif self.expression == "228":
+                    self.expression = "228 공원 가보셨나요"
+                elif self.expression == "1004":
+                    self.expression = "천사예요! 😇"
+                elif self.expression == "666":
+                    self.expression = "지옥의 숫자 🔥"
+                elif self.expression == "777":
+                    self.expression = "아이스크림 하나만 사주세요 🍦"
             except Exception:
                 self.expression = "에러"
         else:
