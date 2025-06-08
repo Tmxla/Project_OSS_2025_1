@@ -39,7 +39,15 @@ class Calculator:
             self.expression = ""
         elif char == '=':
             try:
-                self.expression = str(eval(self.expression))
+                result = eval(self.expression)
+                if result < 0:
+                    self.expression = f"{result} 음수네요 음수도 좋아해주세요."
+                elif result == 0:
+                    self.expression = f"{result} 어려운 식의 답은 대부분 0이죠."
+                elif result >= 1000:
+                    self.expression = f"{result} 어떤 계산을 하시길래 숫자가 이럽니까?"
+                else:
+                    self.expression = str(result)
             except Exception:
                 self.expression = "에러"
         else:
